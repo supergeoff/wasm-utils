@@ -1,0 +1,25 @@
+{
+	"go.lintTool": "golangci-lint",
+	"go.useLanguageServer": true,
+	"go.lintFlags": ["--enable-all", "--fast"],
+	"go.toolsEnvVars": {
+		"GOOS": "js",
+		"GOARCH": "wasm",
+		"CGO_ENABLED": "0"
+	},
+	"gopls": {
+		// Add parameter placeholders when completing a function.
+		"usePlaceholders": true,
+		// If true, enable additional analyses with staticcheck.
+		// Warning: This will significantly increase memory usage.
+		"staticcheck": false
+	},
+	"[go]": {
+		"editor.insertSpaces": false,
+		"editor.formatOnSave": true,
+		"editor.codeActionsOnSave": {
+			"source.fixAll": true,
+			"source.organizeImports": true
+		}
+	}
+}
